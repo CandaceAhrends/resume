@@ -1,0 +1,119 @@
+ul {
+  font-size: 0.8rem;
+}
+h4 {
+  margin: 1rem 2.5rem;
+}
+.job-header {
+  width: 60rem;
+  margin: 0 2.5rem;
+  padding-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 70%;
+  .sub-header {
+    color: rgb(128, 132, 128);
+  }
+  span {
+    font-size: 0.7rem;
+  }
+  p {
+    width: 50%;
+    font-size: 0.8rem;
+  }
+}
+.job-descriptions {
+  padding: 0 0 0 1.5rem;
+  li {
+    width: 80%;
+  }
+}
+.job-cards {
+  margin: 1.2rem;
+  max-width: 80rem;
+
+  div {
+    background: rgb(5 10 6);
+    > div {
+      display: flex;
+      justify-content: end;
+    }
+  }
+}
+.summary {
+  ul {
+    li {
+      padding: 0.2rem 0;
+    }
+  }
+}
+.expand-icon {
+  color: var(--asset-color);
+  padding: 0 1rem;
+  margin-top: -2rem;
+  transition: transform 0.3s ease-in-out; /* Smooth transition */
+  &.up {
+    transform: rotate(180deg) scaleX(-1); /* Rotate and flip for X shape */
+  }
+}
+.expand-content {
+  height: 0; /* Hide the content initially */
+  overflow: hidden; /* Clip any overflowing content */
+  transition: height 0.3s ease-in-out;
+  &.expanded {
+    height: auto; /* Allow content to expand naturally */
+    overflow: visible; /* Show all content */
+  }
+}
+.skills {
+  display: flex;
+}
+.about-me {
+  margin: 2.5rem;
+}
+.link-list {
+  margin: 3rem 0;
+}
+.link {
+  display: flex;
+  padding: 0 1rem;
+  align-items: center;
+  color: #4183c6; /* GitHub blue color */
+  text-decoration: none; /* Remove default underline */
+  transition: color 0.3s ease-in-out; /* Smooth color transition on hover */
+  margin: 1rem 0 0 1.5rem;
+  &:hover {
+    color: var(--asset-color);
+  }
+  span {
+    padding: 0 1rem;
+  }
+}
+@media (max-width: 599px) {
+  .job-cards {
+    margin: 0.5rem 0 0 0;
+  }
+
+  .summary {
+    margin: 0 0 0 -1rem;
+    max-width: 98%;
+    ul {
+      li {
+        p {
+          font-size: 0.8rem;
+        }
+      }
+    }
+  }
+  .block {
+    height: 10rem;
+  }
+}
+
+@media (min-width: 600px) {
+  .about-me {
+    width: 90%;
+    max-width: 40rem;
+  }
+}
